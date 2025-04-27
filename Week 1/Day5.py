@@ -103,7 +103,9 @@ def get_brochure_user_prompt(company_name, url):
 def create_brochure(company_name, url):
     response = client.models.generate_content(
         model='gemini-2.0-flash',
-        system_instruction=system_prompt,
+        config=types.GenerateContentConfig(
+            system_instruction=system_prompt,
+        ),
         contents=get_brochure_user_prompt(company_name, url),
     )
     result = response.text
