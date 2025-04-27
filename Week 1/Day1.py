@@ -48,8 +48,7 @@ def summarize(url):
     website = Website(url)
     response = client.models.generate_content(
         model = "models/gemini-2.5-pro-exp-03-25",
-        config=types.GenerateContentConfig(
-            system_instruction=system_prompt),
+        system_instruction=system_prompt
         contents=user_prompt_for(website)
     )
     return response.text
