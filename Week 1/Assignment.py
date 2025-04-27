@@ -1,6 +1,4 @@
 from google import genai
-from google.genai import types
-from pydantic_core import Url
 import requests
 
 client = genai.Client(api_key="AIzaSyBZL3ZOkZNW3y39q4FAjlvRz5KxD0udxPk")
