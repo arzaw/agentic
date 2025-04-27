@@ -1,9 +1,14 @@
+import os
+from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
 from google import genai
 from google.genai import types
 
-client = genai.Client(api_key="AIzaSyBZL3ZOkZNW3y39q4FAjlvRz5KxD0udxPk")
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
+
+client = genai.Client(api_key=api_key)
 
 message = "Hello, Flash! This is my first ever message to you! Hi!"
 

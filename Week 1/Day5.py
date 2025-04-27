@@ -1,10 +1,15 @@
+import os
+from dotenv import load_dotenv
 import json
 import requests
 from bs4 import BeautifulSoup
 from google import genai
 from google.genai import types
 
-client = genai.Client(api_key="AIzaSyBZL3ZOkZNW3y39q4FAjlvRz5KxD0udxPk")
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
+
+client = genai.Client(api_key=api_key)
 
 headers = {
  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
