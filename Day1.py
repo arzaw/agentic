@@ -1,10 +1,5 @@
-# imports
-
-import os
 import requests
-from dotenv import load_dotenv
 from bs4 import BeautifulSoup
-from IPython.display import Markdown, display
 from google import genai
 from google.genai import types
 
@@ -52,8 +47,6 @@ def summarize(url):
             system_instruction=system_prompt),
         contents=user_prompt_for(website)
     )
-    # print(response.text)
     return response.text
 
 print(summarize("https://arzaw.github.io/coursera-test/"))
-# summarize("https://edwarddonner.com")
