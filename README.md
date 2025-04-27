@@ -15,6 +15,6 @@ https://ai.google.dev/gemini-api/docs
 - API pricing
 - Single Shot Prompting, Multi Shot Prompting, and Zero Shot Prompting
 
-### Week 2"
+### Week 2:
 - Calling the frontier models
 - Setting Temperature of the model(0 means straight forward and 1.0 means creative and risk taking)
